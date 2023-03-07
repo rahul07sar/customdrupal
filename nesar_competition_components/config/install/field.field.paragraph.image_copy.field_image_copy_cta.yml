@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_copy_cta
+    - paragraphs.paragraphs_type.image_copy
+  module:
+    - link
+    - unique_field_ajax
+third_party_settings:
+  unique_field_ajax:
+    unique: 0
+    per_lang: 0
+    case_sensitive: 0
+    use_ajax: 0
+    no_enforce: 0
+    message: ''
+    message_warning: ''
+id: paragraph.image_copy.field_image_copy_cta
+field_name: field_image_copy_cta
+entity_type: paragraph
+bundle: image_copy
+label: CTA
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

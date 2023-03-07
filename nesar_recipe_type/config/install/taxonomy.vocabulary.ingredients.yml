@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Zutaten
+vid: ingredients
+description: 'Vocabulary for Recipe Ingredients.'
+weight: 0

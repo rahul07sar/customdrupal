@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view
+    - paragraphs.paragraphs_type.view
+  module:
+    - viewsreference
+id: paragraph.view.field_view
+field_name: field_view
+entity_type: paragraph
+bundle: view
+label: View
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+    entity_browser: 0
+    entity_reference: 0
+    attachment: 0
+  preselect_views:
+    latest_competitions: latest_competitions
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    contact_messages: 0
+    content: 0
+    content_moderation_dashboard_in_review: 0
+    content_recent: 0
+    dsu_ratings_node_view: 0
+    files: 0
+    frontpage: 0
+    image_browser: 0
+    media: 0
+    media_library: 0
+    moderated_content: 0
+    moderation_dashboard_recently_created: 0
+    moderation_dashboard_recent_changes: 0
+    moderation_history: 0
+    parent_recipe_tags: 0
+    redirect: 0
+    scheduler_scheduled_content: 0
+    store_locator: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    title: 0
+    argument: 0
+    offset: 0
+    limit: 0
+    pager: 0
+field_type: viewsreference

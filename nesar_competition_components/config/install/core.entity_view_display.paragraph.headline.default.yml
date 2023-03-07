@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.headline.field_headline_heading
+    - paragraphs.paragraphs_type.headline
+id: paragraph.headline.default
+targetEntityType: paragraph
+bundle: headline
+mode: default
+content:
+  field_headline_heading:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

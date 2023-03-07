@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.recipe_tags
+id: taxonomy_term.recipe_tags
+target_entity_type_id: taxonomy_term
+target_bundle: recipe_tags
+default_langcode: site_default
+language_alterable: false

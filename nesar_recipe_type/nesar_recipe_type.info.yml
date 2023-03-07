@@ -1,0 +1,34 @@
+name: 'Nesar Recipe Content type'
+description: 'Nesar Recipe Content type'
+type: module
+core_version_requirement: ^8.8 || ^9
+package: 'Nesar Features'
+dependencies:
+  - bootstrap_datepicker
+  - comment
+  - content_moderation
+  - content_translation
+  - datetime
+  - dsu_product
+  - dsu_ratings_reviews
+  - dsu_srh
+  - entity_reference_revisions
+  - field
+  - field_permissions
+  - language
+  - link
+  - menu_ui
+  - metatag
+  - node
+  - options
+  - panelizer
+  - paragraphs
+  - path
+  - taxonomy
+  - text
+  - unique_field_ajax
+  - user
+  - video_embed_field
+  - views
+  - entity_reference
+core_incompatible: false

@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_tags
+    - node.type.recipe
+    - taxonomy.vocabulary.course
+    - taxonomy.vocabulary.cuisine
+    - taxonomy.vocabulary.free_tag
+    - taxonomy.vocabulary.lifestyle
+    - taxonomy.vocabulary.meal
+    - taxonomy.vocabulary.nutritional
+    - taxonomy.vocabulary.occasion
+id: node.recipe.field_recipe_tags
+field_name: field_recipe_tags
+entity_type: node
+bundle: recipe
+label: 'Recipe tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      course: course
+      cuisine: cuisine
+      free_tag: free_tag
+      lifestyle: lifestyle
+      meal: meal
+      nutritional: nutritional
+      occasion: occasion
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: course
+field_type: entity_reference

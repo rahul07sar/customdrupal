@@ -1,0 +1,371 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.dsu_ratings_reviews_comment_type.default
+    - field.field.node.recipe.field_general_tips
+    - field.field.node.recipe.field_meta_tags
+    - field.field.node.recipe.field_playlist_grid_component
+    - field.field.node.recipe.field_playlist_season
+    - field.field.node.recipe.field_product_comment
+    - field.field.node.recipe.field_quote_box
+    - field.field.node.recipe.field_quote_reference
+    - field.field.node.recipe.field_recipe_brand
+    - field.field.node.recipe.field_recipe_chefname
+    - field.field.node.recipe.field_recipe_cooking_time
+    - field.field.node.recipe.field_recipe_description_speecho
+    - field.field.node.recipe.field_recipe_difficulty
+    - field.field.node.recipe.field_recipe_difficulty_id
+    - field.field.node.recipe.field_recipe_id
+    - field.field.node.recipe.field_recipe_images
+    - field.field.node.recipe.field_recipe_ingredient
+    - field.field.node.recipe.field_recipe_ingredients_taxo
+    - field.field.node.recipe.field_recipe_is_voiceready
+    - field.field.node.recipe.field_recipe_isnew
+    - field.field.node.recipe.field_recipe_ispublished
+    - field.field.node.recipe.field_recipe_istraslated
+    - field.field.node.recipe.field_recipe_macronutrients
+    - field.field.node.recipe.field_recipe_name
+    - field.field.node.recipe.field_recipe_number_servings
+    - field.field.node.recipe.field_recipe_original_market_id
+    - field.field.node.recipe.field_recipe_prepa_time
+    - field.field.node.recipe.field_recipe_rec_by_images
+    - field.field.node.recipe.field_recipe_rec_by_ingredients
+    - field.field.node.recipe.field_recipe_rec_by_steps_and_de
+    - field.field.node.recipe.field_recipe_rec_by_tags
+    - field.field.node.recipe.field_recipe_score
+    - field.field.node.recipe.field_recipe_seo_url
+    - field.field.node.recipe.field_recipe_serving_displayname
+    - field.field.node.recipe.field_recipe_servings_time
+    - field.field.node.recipe.field_recipe_sharing
+    - field.field.node.recipe.field_recipe_source
+    - field.field.node.recipe.field_recipe_steps
+    - field.field.node.recipe.field_recipe_tag_course
+    - field.field.node.recipe.field_recipe_tag_cuisine
+    - field.field.node.recipe.field_recipe_tag_free_tag
+    - field.field.node.recipe.field_recipe_tag_lifestyle
+    - field.field.node.recipe.field_recipe_tag_meal
+    - field.field.node.recipe.field_recipe_tag_nutritional
+    - field.field.node.recipe.field_recipe_tag_occasion
+    - field.field.node.recipe.field_recipe_tag_season
+    - field.field.node.recipe.field_recipe_tags
+    - field.field.node.recipe.field_recipe_tags_hierarchical
+    - field.field.node.recipe.field_recipe_tools
+    - field.field.node.recipe.field_recipe_total_time
+    - field.field.node.recipe.field_recipe_updatedate
+    - field.field.node.recipe.field_recipe_variants
+    - field.field.node.recipe.field_recipe_video
+    - field.field.node.recipe.field_recipe_wait_time
+    - field.field.node.recipe.field_related_expert
+    - field.field.node.recipe.field_teaser_full
+    - node.type.recipe
+  module:
+    - comment
+    - entity_reference_revisions
+    - metatag
+    - user
+    - video_embed_field
+id: node.recipe.default
+targetEntityType: node
+bundle: recipe
+mode: default
+content:
+  field_meta_tags:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_playlist_season:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_product_comment:
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_recipe_brand:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_recipe_chefname:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_recipe_cooking_time:
+    type: number_decimal
+    weight: 0
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_recipe_difficulty:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_recipe_difficulty_id:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_recipe_id:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_recipe_ingredient:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_recipe_ingredients_taxo:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_recipe_is_voiceready:
+    type: boolean
+    weight: 0
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_recipe_isnew:
+    type: boolean
+    weight: 0
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_recipe_ispublished:
+    type: boolean
+    weight: 0
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_recipe_istraslated:
+    type: boolean
+    weight: 0
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_recipe_macronutrients:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_recipe_name:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_recipe_number_servings:
+    type: number_decimal
+    weight: 0
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_recipe_original_market_id:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_recipe_prepa_time:
+    type: number_decimal
+    weight: 0
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_recipe_serving_displayname:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_recipe_servings_time:
+    type: number_decimal
+    weight: 0
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_recipe_steps:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_recipe_tools:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_recipe_total_time:
+    type: number_decimal
+    weight: 0
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_recipe_updatedate:
+    type: basic_string
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_recipe_video:
+    type: video_embed_field_video
+    weight: 0
+    region: content
+    label: above
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
+    third_party_settings: {  }
+  field_recipe_wait_time:
+    type: number_decimal
+    weight: 0
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_teaser_full:
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_general_tips: true
+  field_playlist_grid_component: true
+  field_quote_box: true
+  field_quote_reference: true
+  field_recipe_description_speecho: true
+  field_recipe_images: true
+  field_recipe_rec_by_images: true
+  field_recipe_rec_by_ingredients: true
+  field_recipe_rec_by_steps_and_de: true
+  field_recipe_rec_by_tags: true
+  field_recipe_score: true
+  field_recipe_seo_url: true
+  field_recipe_sharing: true
+  field_recipe_source: true
+  field_recipe_tag_course: true
+  field_recipe_tag_cuisine: true
+  field_recipe_tag_free_tag: true
+  field_recipe_tag_lifestyle: true
+  field_recipe_tag_meal: true
+  field_recipe_tag_nutritional: true
+  field_recipe_tag_occasion: true
+  field_recipe_tag_season: true
+  field_recipe_tags: true
+  field_recipe_tags_hierarchical: true
+  field_recipe_variants: true
+  field_related_expert: true
+  langcode: true
+  search_api_excerpt: true

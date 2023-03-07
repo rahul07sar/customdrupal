@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_product
+    - node.type.dsu_product
+    - node.type.recipe
+  module:
+    - unique_field_ajax
+third_party_settings:
+  unique_field_ajax:
+    unique: 0
+    per_lang: 0
+    case_sensitive: 0
+    use_ajax: 0
+    no_enforce: 0
+    message: ''
+    message_warning: ''
+id: node.recipe.field_recipe_product
+field_name: field_recipe_product
+entity_type: node
+bundle: recipe
+label: 'Recipe Product'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dsu_product: dsu_product
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

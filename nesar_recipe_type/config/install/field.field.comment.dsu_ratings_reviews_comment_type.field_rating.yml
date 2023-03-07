@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.dsu_ratings_reviews_comment_type
+    - field.storage.comment.field_rating
+  module:
+    - options
+id: comment.dsu_ratings_reviews_comment_type.field_rating
+field_name: field_rating
+entity_type: comment
+bundle: dsu_ratings_reviews_comment_type
+label: Rating
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

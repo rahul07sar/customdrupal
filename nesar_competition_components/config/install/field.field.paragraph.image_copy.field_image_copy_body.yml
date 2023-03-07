@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_copy_body
+    - paragraphs.paragraphs_type.image_copy
+id: paragraph.image_copy.field_image_copy_body
+field_name: field_image_copy_body
+entity_type: paragraph
+bundle: image_copy
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

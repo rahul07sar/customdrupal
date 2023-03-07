@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_tools
+    - node.type.recipe
+    - paragraphs.paragraphs_type.recipe_tools
+  module:
+    - entity_reference_revisions
+id: node.recipe.field_recipe_tools
+field_name: field_recipe_tools
+entity_type: node
+bundle: recipe
+label: 'Recipe tools'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      recipe_tools: recipe_tools
+    target_bundles_drag_drop:
+      macronutrients:
+        weight: 4
+        enabled: false
+      recipe_tools:
+        enabled: true
+        weight: 4
+      recipe_steps:
+        weight: 5
+        enabled: false
+field_type: entity_reference_revisions

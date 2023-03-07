@@ -1,0 +1,617 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.recipe.field_general_tips
+    - field.field.node.recipe.field_meta_tags
+    - field.field.node.recipe.field_playlist_grid_component
+    - field.field.node.recipe.field_playlist_season
+    - field.field.node.recipe.field_product_comment
+    - field.field.node.recipe.field_quote_box
+    - field.field.node.recipe.field_quote_reference
+    - field.field.node.recipe.field_recipe_brand
+    - field.field.node.recipe.field_recipe_chefname
+    - field.field.node.recipe.field_recipe_cooking_time
+    - field.field.node.recipe.field_recipe_description_speecho
+    - field.field.node.recipe.field_recipe_difficulty
+    - field.field.node.recipe.field_recipe_difficulty_id
+    - field.field.node.recipe.field_recipe_id
+    - field.field.node.recipe.field_recipe_images
+    - field.field.node.recipe.field_recipe_ingredient
+    - field.field.node.recipe.field_recipe_ingredients_taxo
+    - field.field.node.recipe.field_recipe_is_voiceready
+    - field.field.node.recipe.field_recipe_isnew
+    - field.field.node.recipe.field_recipe_ispublished
+    - field.field.node.recipe.field_recipe_istraslated
+    - field.field.node.recipe.field_recipe_macronutrients
+    - field.field.node.recipe.field_recipe_name
+    - field.field.node.recipe.field_recipe_number_servings
+    - field.field.node.recipe.field_recipe_original_market_id
+    - field.field.node.recipe.field_recipe_prepa_time
+    - field.field.node.recipe.field_recipe_rec_by_images
+    - field.field.node.recipe.field_recipe_rec_by_ingredients
+    - field.field.node.recipe.field_recipe_rec_by_steps_and_de
+    - field.field.node.recipe.field_recipe_rec_by_tags
+    - field.field.node.recipe.field_recipe_score
+    - field.field.node.recipe.field_recipe_seo_url
+    - field.field.node.recipe.field_recipe_serving_displayname
+    - field.field.node.recipe.field_recipe_servings_time
+    - field.field.node.recipe.field_recipe_sharing
+    - field.field.node.recipe.field_recipe_source
+    - field.field.node.recipe.field_recipe_steps
+    - field.field.node.recipe.field_recipe_tag_course
+    - field.field.node.recipe.field_recipe_tag_cuisine
+    - field.field.node.recipe.field_recipe_tag_free_tag
+    - field.field.node.recipe.field_recipe_tag_lifestyle
+    - field.field.node.recipe.field_recipe_tag_meal
+    - field.field.node.recipe.field_recipe_tag_nutritional
+    - field.field.node.recipe.field_recipe_tag_occasion
+    - field.field.node.recipe.field_recipe_tag_season
+    - field.field.node.recipe.field_recipe_tags
+    - field.field.node.recipe.field_recipe_tags_hierarchical
+    - field.field.node.recipe.field_recipe_tools
+    - field.field.node.recipe.field_recipe_total_time
+    - field.field.node.recipe.field_recipe_updatedate
+    - field.field.node.recipe.field_recipe_variants
+    - field.field.node.recipe.field_recipe_video
+    - field.field.node.recipe.field_recipe_wait_time
+    - field.field.node.recipe.field_related_expert
+    - field.field.node.recipe.field_teaser_full
+    - node.type.recipe
+  module:
+    - comment
+    - content_moderation
+    - metatag
+    - paragraphs
+    - path
+    - video_embed_field
+id: node.recipe.default
+targetEntityType: node
+bundle: recipe
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 32
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_general_tips:
+    type: entity_reference_paragraphs
+    weight: 46
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_meta_tags:
+    weight: 45
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_playlist_grid_component:
+    type: entity_reference_paragraphs
+    weight: 41
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_playlist_season:
+    weight: 43
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_product_comment:
+    weight: 42
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_recipe_brand:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_chefname:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_cooking_time:
+    type: number
+    weight: 17
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_difficulty:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_difficulty_id:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_id:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_images:
+    type: entity_reference_paragraphs
+    weight: 55
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_recipe_ingredient:
+    type: entity_reference_paragraphs
+    weight: 13
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_recipe_ingredients_taxo:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_is_voiceready:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_recipe_isnew:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_recipe_ispublished:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_recipe_istraslated:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_recipe_macronutrients:
+    type: entity_reference_paragraphs
+    weight: 7
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_recipe_name:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_number_servings:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_original_market_id:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_prepa_time:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_rec_by_images:
+    type: number
+    weight: 62
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_rec_by_ingredients:
+    type: number
+    weight: 61
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_rec_by_steps_and_de:
+    type: number
+    weight: 60
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_rec_by_tags:
+    type: number
+    weight: 59
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_score:
+    type: string_textfield
+    weight: 58
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_seo_url:
+    type: string_textfield
+    weight: 57
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_serving_displayname:
+    weight: 39
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_recipe_servings_time:
+    type: number
+    weight: 25
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_source:
+    type: string_textfield
+    weight: 56
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_steps:
+    type: paragraphs
+    weight: 11
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+  field_recipe_tag_course:
+    type: entity_reference_autocomplete
+    weight: 53
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_tag_cuisine:
+    type: entity_reference_autocomplete
+    weight: 52
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_tag_free_tag:
+    type: entity_reference_autocomplete
+    weight: 51
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_tag_lifestyle:
+    type: entity_reference_autocomplete
+    weight: 50
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_tag_meal:
+    type: entity_reference_autocomplete
+    weight: 49
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_tag_nutritional:
+    type: entity_reference_autocomplete
+    weight: 48
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_tag_occasion:
+    type: entity_reference_autocomplete
+    weight: 63
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_tags:
+    type: entity_reference_autocomplete
+    weight: 54
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_tags_hierarchical:
+    type: entity_reference_autocomplete
+    weight: 47
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_tools:
+    type: paragraphs
+    weight: 20
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+  field_recipe_total_time:
+    type: number
+    weight: 21
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_updatedate:
+    type: string_textarea
+    weight: 22
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_recipe_variants:
+    type: entity_reference_paragraphs
+    weight: 64
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_recipe_video:
+    type: video_embed_field_textfield
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_recipe_wait_time:
+    type: number
+    weight: 24
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_related_expert:
+    type: entity_reference_autocomplete
+    weight: 40
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_teaser_full:
+    weight: 44
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: teaser_full
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
+  langcode:
+    type: language_select
+    weight: 26
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 37
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 35
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 33
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    weight: 67
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
+  publish_state:
+    weight: 65
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 38
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 34
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    weight: 68
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
+  unpublish_state:
+    weight: 66
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  url_redirects:
+    weight: 36
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_quote_box: true
+  field_quote_reference: true
+  field_recipe_description_speecho: true
+  field_recipe_sharing: true
+  field_recipe_tag_season: true

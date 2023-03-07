@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.dsu_ratings_reviews_comment_type
+    - field.storage.comment.field_email_contribution
+id: comment.dsu_ratings_reviews_comment_type.field_email_contribution
+field_name: field_email_contribution
+entity_type: comment
+bundle: dsu_ratings_reviews_comment_type
+label: 'Email Contribution'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

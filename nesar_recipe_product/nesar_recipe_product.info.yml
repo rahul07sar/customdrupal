@@ -1,0 +1,7 @@
+name: Nesar Recipe Product
+description: 'Provides Recipe Product Block'
+type: module
+core_version_requirement: ^8.7.7 || ^9
+dependencies:
+  - nesar_recipe
+package: Nesar Recipe

@@ -1,0 +1,18 @@
+name: 'Nesar Banner'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - 'drupal:field'
+  - 'drupal:media'
+  - 'drupal:media_library'
+  - 'drupal:text'
+  - 'dsu_c_core:dsu_c_core'
+  - 'entity_browser:entity_browser'
+  - 'entity_reference_revisions:entity_reference_revisions'
+  - 'field_permissions:field_permissions'
+  - 'metatag:metatag'
+  - 'nesar_hero_stage_component:nesar_hero_stage_component'
+  - 'nesar_product_ingredients_paragraph:nesar_product_ingredients_paragraph'
+  - 'paragraphs:paragraphs'
+  - 'unique_field_ajax:unique_field_ajax'
+package: 'Nesar Features'

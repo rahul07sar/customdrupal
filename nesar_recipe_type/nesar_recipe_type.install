@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Add youtube video api response field.
+ */
+
+use Drupal\Core\Config\FileStorage;
+
+/**
+ * Add youtube video api response field.
+ */
+function nesar_recipe_type_update_8001() {
+  $config_storage = \Drupal::service('config.storage');
+
+  $config_path = drupal_get_path('module', 'maggi_recipe_type') . '/config/install';
+  $source = new FileStorage($config_path);
+  $config_storage->write('core.entity_form_display.node.recipe.default', $source->read('core.entity_form_display.node.recipe.default'));
+  $config_storage->write('core.entity_view_display.node.recipe.default', $source->read('core.entity_view_display.node.recipe.default'));
+}

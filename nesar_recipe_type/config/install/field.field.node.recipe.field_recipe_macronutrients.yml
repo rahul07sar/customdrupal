@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_macronutrients
+    - node.type.recipe
+    - paragraphs.paragraphs_type.macronutrients
+  module:
+    - entity_reference_revisions
+id: node.recipe.field_recipe_macronutrients
+field_name: field_recipe_macronutrients
+entity_type: node
+bundle: recipe
+label: 'Recipie Macronutrients'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      macronutrients: macronutrients
+    target_bundles_drag_drop:
+      macronutrients:
+        enabled: true
+        weight: 5
+      recipe_steps:
+        weight: 6
+        enabled: false
+      recipe_tools:
+        weight: 7
+        enabled: false
+field_type: entity_reference_revisions

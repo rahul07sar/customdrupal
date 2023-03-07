@@ -1,0 +1,12 @@
+excluded:
+  - node.type.generic_
+  - core.entity_form_display.node.generic_.default
+  - core.entity_view_display.node.generic_.default
+  - core.entity_view_display.node.generic_.teaser
+  - field.field.node.generic_.field_generic_components
+  - field.field.node.generic_.field_meta_tags
+  - field.field.node.generic_.field_store_type
+  - metatag.metatag_defaults.node__cooking_knowledge
+  - metatag.metatag_defaults.node__dsu_component_page
+  - metatag.metatag_defaults.node__recipe
+required: true

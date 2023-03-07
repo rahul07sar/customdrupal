@@ -1,0 +1,150 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_images
+    - node.type.recipe
+    - paragraphs.paragraphs_type.media_information
+  module:
+    - entity_reference_revisions
+id: node.recipe.field_recipe_images
+field_name: field_recipe_images
+entity_type: node
+bundle: recipe
+label: 'Recipe Images'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      media_information: media_information
+    target_bundles_drag_drop:
+      accordion:
+        weight: 42
+        enabled: false
+      accordion_item:
+        weight: 43
+        enabled: false
+      change_log_entry:
+        weight: 44
+        enabled: false
+      c_countdown:
+        weight: 45
+        enabled: false
+      c_document:
+        weight: 46
+        enabled: false
+      c_entitycycle:
+        weight: 47
+        enabled: false
+      c_externalvideo:
+        weight: 48
+        enabled: false
+      c_gallery:
+        weight: 49
+        enabled: false
+      c_gallery_item:
+        weight: 50
+        enabled: false
+      c_image:
+        weight: 51
+        enabled: false
+      c_link:
+        weight: 52
+        enabled: false
+      c_link_document_container:
+        weight: 53
+        enabled: false
+      c_map:
+        weight: 54
+        enabled: false
+      c_share_buttons:
+        weight: 55
+        enabled: false
+      c_sideimagetext:
+        weight: 56
+        enabled: false
+      c_slide:
+        weight: 57
+        enabled: false
+      c_slider:
+        weight: 58
+        enabled: false
+      c_socialbuttons:
+        weight: 59
+        enabled: false
+      c_social_buttons_item:
+        weight: 60
+        enabled: false
+      c_spacer:
+        weight: 61
+        enabled: false
+      c_tabbed_content:
+        weight: 62
+        enabled: false
+      c_tab_item:
+        weight: 63
+        enabled: false
+      c_teasercycle:
+        weight: 64
+        enabled: false
+      c_teasercycle_item:
+        weight: 65
+        enabled: false
+      c_teaserslider:
+        weight: 66
+        enabled: false
+      c_teaser_slide:
+        weight: 67
+        enabled: false
+      c_text:
+        weight: 68
+        enabled: false
+      dsu_functionality_option:
+        weight: 69
+        enabled: false
+      dsu_tint:
+        weight: 70
+        enabled: false
+      layout_columns_1:
+        weight: 71
+        enabled: false
+      layout_columns_2:
+        weight: 72
+        enabled: false
+      layout_columns_3:
+        weight: 73
+        enabled: false
+      layout_columns_4:
+        weight: 74
+        enabled: false
+      macronutrients:
+        weight: 75
+        enabled: false
+      media_information:
+        enabled: true
+        weight: 76
+      product_listing_block:
+        weight: 77
+        enabled: false
+      recipe_ingredients:
+        weight: 78
+        enabled: false
+      recipe_steps:
+        weight: 79
+        enabled: false
+      recipe_tools:
+        weight: 80
+        enabled: false
+      tags_selector:
+        weight: 81
+        enabled: false
+      tips:
+        weight: 82
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Manages recipe Product module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function nesar_recipe_product_theme($existing, $type, $theme, $path) {
+  return [
+    'nesar_recipe_product_block' => [
+      'template' => 'block--nesar-recipe-product-block',
+      'variables' => [
+        'product' => [],
+        'description' => NULL,
+      ],
+    ],
+  ];
+}

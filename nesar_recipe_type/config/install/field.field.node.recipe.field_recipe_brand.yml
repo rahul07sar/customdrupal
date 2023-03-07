@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_brand
+    - node.type.recipe
+id: node.recipe.field_recipe_brand
+field_name: field_recipe_brand
+entity_type: node
+bundle: recipe
+label: 'Recipe Brand'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

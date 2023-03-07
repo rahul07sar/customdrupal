@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * Manages Competition components module.
+ */
+
+use Drupal\Core\Url;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\media\Entity\Media;
+
+/**
+ * Implements hook_theme().
+ */
+function nesar_competition_components_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__view' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__image_copy' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__headline' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_paragraph
+ */
+function nesar_competition_components_preprocess_paragraph__image_copy(&$variables) {
+  $paragraph = $variables['paragraph'];
+  if (!empty($paragraph->field_image_copy_image->referencedEntities())) {
+    $image = $paragraph->field_image_copy_image->first()->getValue();
+    if (!empty($image) && !empty($image['target_id'])) {
+      $media = Media::load($image['target_id']);
+      if (!empty($media)) {
+        $image_file_id = $media->get('field_media_image')->first()->get('target_id')->getString();
+        $image['alt'] = $media->get('field_media_image')->first()->get('alt')->getString();
+        $file = File::load($image_file_id);
+        if (!empty($file)) {
+          $image_url = ImageStyle::load('maggi_teaser_full_landscape')->buildUrl($file->getFileUri());
+          $image['source'] = [
+            'small' => ImageStyle::load('home_stage_375_657')->buildUrl($file->getFileUri()),
+            'medium' => ImageStyle::load('home_stage_708_398')->buildUrl($file->getFileUri()),
+            'large' => ImageStyle::load('home_stage_1044_531')->buildUrl($file->getFileUri()),
+            'xlarge' => ImageStyle::load('home_stage_1600_700')->buildUrl($file->getFileUri()),
+          ];
+
+        }
+      }
+    }
+  }
+  $cta_attr = $paragraph->get('field_image_copy_cta')->first()->get('options')->getValue()['attributes'];
+  //$variables['imagecopy']['competitionPage'] = true;
+  $variables['imagecopy'] = [
+    'elements' => [
+      [
+        'type' => 'image',
+        'title' => $paragraph->field_image_copy_title->value,
+        'description' => $paragraph->field_image_copy_body->value,
+        'cta' => [
+          'link' => Url::fromUri($paragraph->get('field_image_copy_cta')->first()->get('uri')->getString()),
+          'target' => $cta_attr['target'] ?? '_self',
+          'label' => $paragraph->get('field_image_copy_cta')->first()->get('title')->getString(),
+        ],
+        'image' => $image,
+      ],
+    ],
+   'competitionPage' => true,
+  ];
+}

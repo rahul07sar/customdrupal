@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: playlist_grid
+label: 'Playlist Grid'
+icon_uuid: null
+description: 'Custom Paragraph to add playlist grid components to templates '
+behavior_plugins: {  }

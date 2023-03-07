@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: competition_creator
+label: 'Competition creator'
+weight: 23
+is_admin: false

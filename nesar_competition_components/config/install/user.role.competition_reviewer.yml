@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: competition_reviewer
+label: 'Competition reviewer'
+weight: 24
+is_admin: false

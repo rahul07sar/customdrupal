@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.dsu_ratings_reviews_comment_type
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_comment_name
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_dsu_comment
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_dsu_ratings
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_email
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_email_contribution
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_like
+    - field.field.comment.dsu_ratings_reviews_comment_type.field_rating
+id: comment.dsu_ratings_reviews_comment_type.default
+targetEntityType: comment
+bundle: dsu_ratings_reviews_comment_type
+mode: default
+content:
+  field_comment_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_dsu_comment:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  author: true
+  field_dsu_ratings: true
+  field_email: true
+  field_email_contribution: true
+  field_like: true
+  field_rating: true
+  langcode: true
+  subject: true

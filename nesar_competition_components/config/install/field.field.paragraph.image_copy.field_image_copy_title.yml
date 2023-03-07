@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_copy_title
+    - paragraphs.paragraphs_type.image_copy
+  module:
+    - unique_field_ajax
+third_party_settings:
+  unique_field_ajax:
+    unique: 0
+    per_lang: 0
+    case_sensitive: 0
+    use_ajax: 0
+    no_enforce: 0
+    message: ''
+    message_warning: ''
+id: paragraph.image_copy.field_image_copy_title
+field_name: field_image_copy_title
+entity_type: paragraph
+bundle: image_copy
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

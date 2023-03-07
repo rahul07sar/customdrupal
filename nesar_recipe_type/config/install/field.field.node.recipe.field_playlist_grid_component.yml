@@ -1,0 +1,207 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_playlist_grid_component
+    - node.type.recipe
+    - paragraphs.paragraphs_type.playlist_grid
+  module:
+    - entity_reference_revisions
+id: node.recipe.field_playlist_grid_component
+field_name: field_playlist_grid_component
+entity_type: node
+bundle: recipe
+label: 'Playlist Grid Component'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      playlist_grid: playlist_grid
+    target_bundles_drag_drop:
+      accordion:
+        weight: 61
+        enabled: false
+      accordion_item:
+        weight: 62
+        enabled: false
+      anchor_component:
+        weight: 63
+        enabled: false
+      brand_alphabet:
+        weight: 64
+        enabled: false
+      brand_categories:
+        weight: 65
+        enabled: false
+      brand_main_teaser:
+        weight: 66
+        enabled: false
+      brand_overview:
+        weight: 67
+        enabled: false
+      brand_product_teaser:
+        weight: 68
+        enabled: false
+      brand_quality_teaser:
+        weight: 69
+        enabled: false
+      brand_teaser_social_link:
+        weight: 70
+        enabled: false
+      c_image:
+        weight: 71
+        enabled: false
+      c_sideimagetext:
+        weight: 72
+        enabled: false
+      c_slide:
+        weight: 73
+        enabled: false
+      c_slider:
+        weight: 74
+        enabled: false
+      c_text:
+        weight: 75
+        enabled: false
+      categories_listing:
+        weight: 76
+        enabled: false
+      comment:
+        weight: 77
+        enabled: false
+      comments:
+        weight: 78
+        enabled: false
+      component_headline:
+        weight: 79
+        enabled: false
+      cta_text_and_body:
+        weight: 80
+        enabled: false
+      footer_media_links:
+        weight: 81
+        enabled: false
+      hero_stage:
+        weight: 82
+        enabled: false
+      iframe:
+        weight: 83
+        enabled: false
+      layout_columns_1:
+        weight: 84
+        enabled: false
+      layout_columns_2:
+        weight: 85
+        enabled: false
+      layout_columns_3:
+        weight: 86
+        enabled: false
+      layout_columns_4:
+        weight: 87
+        enabled: false
+      macronutrients:
+        weight: 88
+        enabled: false
+      nde_accordion_c_container:
+        weight: 89
+        enabled: false
+      nde_accordion_panel_container:
+        weight: 90
+        enabled: false
+      playlist_grid:
+        enabled: true
+        weight: 91
+      prod_ingred_additives_item:
+        weight: 92
+        enabled: false
+      prod_nutri_inf_item:
+        weight: 93
+        enabled: false
+      prod_prep_feeding_table_item:
+        weight: 94
+        enabled: false
+      product_allergen_item:
+        weight: 95
+        enabled: false
+      product_allergen_nutritional_inf:
+        weight: 96
+        enabled: false
+      product_explorer_heading:
+        weight: 97
+        enabled: false
+      product_explorer_teaser:
+        weight: 98
+        enabled: false
+      product_icons:
+        weight: 99
+        enabled: false
+      product_info:
+        weight: 100
+        enabled: false
+      product_ingredients:
+        weight: 101
+        enabled: false
+      product_main_section:
+        weight: 102
+        enabled: false
+      product_nutritional_information:
+        weight: 103
+        enabled: false
+      product_nutritional_unit:
+        weight: 104
+        enabled: false
+      product_preparation:
+        weight: 105
+        enabled: false
+      product_section_columns:
+        weight: 106
+        enabled: false
+      recipe_ingredients:
+        weight: 107
+        enabled: false
+      recipe_steps:
+        weight: 108
+        enabled: false
+      recipe_tools:
+        weight: 109
+        enabled: false
+      short_teaser:
+        weight: 110
+        enabled: false
+      social_media_links:
+        weight: 111
+        enabled: false
+      tags_selector:
+        weight: 112
+        enabled: false
+      teaser:
+        weight: 113
+        enabled: false
+      teaser_column_layout:
+        weight: 114
+        enabled: false
+      teaser_cycle:
+        weight: 115
+        enabled: false
+      teaser_full:
+        weight: 116
+        enabled: false
+      teaser_popup:
+        weight: 117
+        enabled: false
+      text:
+        weight: 118
+        enabled: false
+      text_only:
+        weight: 119
+        enabled: false
+      video_single:
+        weight: 120
+        enabled: false
+field_type: entity_reference_revisions

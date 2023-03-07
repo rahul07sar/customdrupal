@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: teaser_full
+label: 'Teaser Full'
+icon_uuid: null
+description: 'custom paragraph to create teaser full component '
+behavior_plugins: {  }

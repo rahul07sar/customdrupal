@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.competition
+id: node.competition
+target_entity_type_id: node
+target_bundle: competition
+default_langcode: site_default
+language_alterable: false

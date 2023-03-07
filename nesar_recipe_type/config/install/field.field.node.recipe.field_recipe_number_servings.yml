@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_number_servings
+    - node.type.recipe
+id: node.recipe.field_recipe_number_servings
+field_name: field_recipe_number_servings
+entity_type: node
+bundle: recipe
+label: 'Recipe Number Servings'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float
