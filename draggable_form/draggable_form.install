@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Install and uninstall functions for the draggable form module.
+ *
+ * This file contains the functions required to perform install and
+ * uninstall operations.
+ */
+
+function draggable_form_schema() {
+  $schema['draggable_form'] = [
+    'description' => 'Stores entries from the draggable form.',
+    'fields' => [
+      'id' => [
+        'description' => 'The primary identifier for each item',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'description' => 'A name for this item',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'description' => [
+        'description' => 'A description for this item',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'itemgroup' => [
+        'description' => 'The group this item belongs to',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'weight' => [
+        'description' => 'The sortable weight for this item',
+        'type' => 'int',
+        'length' => 11,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'pid' => [
+        'description' => 'The primary id of the parent for this item',
+        'type' => 'int',
+        'length' => 11,
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => [
+      'id',
+    ],
+  ];
+  return $schema;
+}

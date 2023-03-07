@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - draggable_form
+    - user
+  theme:
+    - olivero
+id: insertdatablock
+theme: olivero
+region: content
+weight: -6
+provider: null
+plugin: insert_data_block
+settings:
+  id: insert_data_block
+  label: 'Insert Data Block'
+  label_display: visible
+  provider: draggable_form
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator

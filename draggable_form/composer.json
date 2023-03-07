@@ -1,0 +1,22 @@
+{
+    "name": "drupal/draggable_form",
+    "description": "Provides a Draggable Form with weight and is placed by default in a custom block.",
+    "type": "drupal-module",
+    "authors": [
+      {
+        "name": "Rahul Sarkar",
+        "role": "Maintainer"
+      }
+    ],
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "require": {
+      "drupal/core": "^8.8 || ^9"
+    },
+    "extra": {
+      "branch-alias": {
+         "dev-8.x-2.x": "2.x-dev"
+      },
+      "enable-patching": true   
+      }
+    }
